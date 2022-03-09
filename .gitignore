@@ -133,3 +133,6 @@ env/
 
 #ignore mlruns
 mlruns/
+
+#ignore temp
+temp/
