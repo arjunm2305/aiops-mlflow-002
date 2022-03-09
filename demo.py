@@ -1,7 +1,6 @@
 import os
 import argparse
 import time
-from tkinter import E
 from sklearn.metrics import mean_squared_error, mean_absolute_error, r2_score
 from sklearn.model_selection import train_test_split
 from sklearn.linear_model import ElasticNet
@@ -47,8 +46,6 @@ def main(alpha, l1_ratio):
     print(f"Eval Metrics - rmae = {rmse}, mae = {mae}, r2 = {r2}")
 
     mlflow.sklearn.log_model(model_lr, "model") #modelname,  folder to save
-    
- 
 
 if __name__ == '__main__':
   args = argparse.ArgumentParser()
